@@ -1,0 +1,109 @@
+html {
+    height: 100%;
+    background: rgb(159,159,237);
+    background: linear-gradient(45deg, rgba(159,159,237,1) 0%, rgba(115,108,237,1) 100%); 
+}
+
+
+#menuBar {
+    display: flex;
+    margin: 0;
+    background-color: #736CED;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+#settings {
+    margin: 0; position: absolute; right: 10px;
+}
+
+#logo {
+    margin: 0; position: absolute; left: 10px; height: 30px;
+}
+
+#calculatorWrapper {
+    display: flex;
+    align-items: center;
+    height:90%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-input {
+    padding: 0;
+    width: 135px;
+    font-size: 120px;
+    color: #FEF9FF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.time-input::placeholder {
+    color:#FEF9FF;
+}
+
+.colon {
+    width: auto;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#operator { 
+    margin: 20px;
+    cursor: default;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+
+#operation-selector-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.operator-arrow {
+    width: 50px;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: #736CED;
+    color: #FEF9FF;
+    border-radius: 10px;
+    border-width: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin: 30px;
+    transition: background-color .2s, transform .2s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #9f9fed;
+}
+
+#submit:active {
+    transform: scale(.8);
+}
+
+#answer {
+    font-size: 120px;
+    color: #FEF9FF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
