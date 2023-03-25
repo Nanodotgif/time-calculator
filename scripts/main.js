@@ -119,7 +119,7 @@ function switchOperator() {
   if (isAdding) {
     operator.src = "time-calculator/images/1x/Plus.png"
   } else {
-    operator.src = "time-calculator/images/1x/Minus.png"
+    operator.src = "time-calculator/images/1x/Minus.png" // Github has simply decided not to work
   }
 }
 
