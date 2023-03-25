@@ -117,9 +117,9 @@ const operator = document.getElementById("operator");
 function switchOperator() {
   isAdding = !isAdding;
   if (isAdding) {
-    operator.src = "/images/1x/Plus.png"
+    operator.src = "images/1x/Plus.png"
   } else {
-    operator.src = "/images/1x/Minus.png"
+    operator.src = "images/1x/Minus.png"
   }
 }
 
