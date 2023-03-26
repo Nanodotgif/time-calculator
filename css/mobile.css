@@ -126,9 +126,6 @@ textarea:focus, input:focus{
     z-index: 10;
 }
 
-a {
-    color: #FEF9FF;
-    font-family: 'Roboto', sans-serif;
-    position: fixed;
-    bottom: 5px;
+footer, a {
+    display: none;
 }
