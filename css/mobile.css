@@ -116,7 +116,7 @@ textarea:focus, input:focus{
     width: 100%;
     height: 50px;
     background-color: #736CED;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     color: #FEF9FF;
     font-family: 'Roboto', sans-serif;
