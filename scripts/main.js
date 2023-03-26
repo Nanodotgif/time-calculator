@@ -231,6 +231,7 @@ mobileBottomBar.addEventListener("mousedown", (event)=> {
     } else {
       substituteCurrentTime(focusableFields.indexOf(activeElement) - 1);
     }
+    focusNextField();
   }
 });
 
