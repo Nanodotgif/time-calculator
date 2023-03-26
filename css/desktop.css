@@ -81,11 +81,11 @@ textarea:focus, input:focus{
     cursor: pointer;
 }
 
-#submit {
+#submit, .currentTime {
     background-color: #736CED;
-    color: #FEF9FF;
     border-radius: 10px;
     border-width: 0;
+    color: #FEF9FF;
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     margin: 30px;
@@ -93,11 +93,11 @@ textarea:focus, input:focus{
     cursor: pointer;
 }
 
-#submit:hover {
+#submit:hover, .currentTime:hover {
     background-color: #9f9fed;
 }
 
-#submit:active {
+#submit:active, .currentTime:active {
     transform: scale(.8);
 }
 

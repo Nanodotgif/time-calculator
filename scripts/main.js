@@ -119,7 +119,7 @@ function switchOperator() {
   if (isAdding) {
     operator.src = "images/1x/Plus.png"
   } else {
-    operator.src = "images/1x/Minus.png" // Github has simply decided not to work // GITHUB DOES NOT LIKE ME
+    operator.src = "images/1x/Minus.png"
   }
 }
 
@@ -200,6 +200,42 @@ function formatTimeInt(number) {
   }
 }
 
+function substituteCurrentTime(index) {
+  hour = focusableFields[index];
+  minute = focusableFields[index + 1];
+
+  currTime = new Date().toLocaleTimeString().split(":");
+  currTime.splice(2);
+
+  hour.value = formatTimeInt(parseInt(currTime[0]));
+  minute.value = formatTimeInt(parseInt(currTime[1]));
+}
+
+
+var mobileBottomBar = document.getElementById("mobileBottomBar");
+mobileBottomBar.style.display = 'none';
+window.addEventListener('resize', (event)=> {
+  if (visualViewport.height < 600) {
+    mobileBottomBar.style.display = 'flex';
+  } else {
+    mobileBottomBar.style.display = 'none';
+  }
+});
+
+mobileBottomBar.addEventListener("mousedown", (event)=> {
+  event.preventDefault();
+  var activeElement = document.activeElement;
+  if (focusableFields.includes(activeElement)) {
+    if (activeElement.classList.contains("hour")) {
+      substituteCurrentTime(focusableFields.indexOf(activeElement));
+    } else {
+      substituteCurrentTime(focusableFields.indexOf(activeElement) - 1);
+    }
+  }
+});
+
+
+
 // [x] Implement smart formatting of times(adding zeros)
 // [x]  hours need to recognize numbers over 1 and error numbers over 12
 // [x]  minutes need to recognize numbers over 5 and error for numbers over 59
@@ -207,4 +243,4 @@ function formatTimeInt(number) {
 // [x] obviously do the actual calculations
 // [x] display the result with a submit button i guess forgot about that lol
 // [x] customize css for mobile
-// [ ] support suplementing the current time for either side
+// [x] support suplementing the current time for either side

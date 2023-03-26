@@ -1,9 +1,11 @@
-
+var platform = null;
 window.onload = ()=>{
     var cssPath = "standard.css";
     if (visualViewport.width < 600) {
+        platform = 'mobile';
         cssPath = "css/mobile.css";
     } else {
+        platform = 'desktop';
         cssPath = "css/desktop.css";
     }
 
@@ -18,4 +20,8 @@ window.onload = ()=>{
     const loadingDiv = document.getElementById("load");
 
     loadingDiv.style.opacity = 0;
+}
+
+function getPlatform() {
+    return platform;
 }
